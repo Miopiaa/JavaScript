@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+       var NumInicial  = prompt("Informe o valor Inicial:");
+       var sinal = prompt('Informe o sinal da sua operação:');
+
+       while (sinal != '-' && sinal != '+' && sinal != '*' && sinal != '/'){
+           prompt('Informe uma operação válida :O');
+           sinal = prompt('Informe o sinal da sua operação:')
+       }
+
+       var NumFinal = prompt("Informe o valor Final:");
+       
+       NumInicial = parseInt(NumInicial);
+       NumFinal = parseInt(NumFinal);
+
+       var resultadoFinal = 0;
+       if (sinal == '+'){
+           resultadoFinal = (NumInicial + NumFinal); 
+       }else if (sinal == '-'){
+           resultadoFinal = (NumInicial - NumFinal);
+       }else if (sinal == '/'){
+           resultadoFinal = (NumInicial / NumFinal);
+       }else if (sinal == '*'){
+           resultadoFinal = (NumInicial * NumFinal);
+       }
+      
+       alert('O resultado é: '+resultadoFinal);
+
+    </script>
+</body>
+</html>
