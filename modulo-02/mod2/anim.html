@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <body>
+        <style>
+            /*
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                margin-left: 0;
+            }
+            .animEsquerda{
+                transition: 1s;
+                margin-left: 90px;
+                margin-top: 100px;
+            }
+            */
+            .conteudo h2 span{
+                font-size: 13px;
+                cursor: pointer;
+            }
+            .conteudo p{
+                overflow: hidden;
+                height: 10px;
+                transition: 1s;
+            }
+            .mostrar{
+                height: 200px !important;
+            }
+        </style>
+        <!--<div class="box"></div>-->
+        <div class="conteudo">
+            <h2>Titulo do conteúdo <span>Ver nais!</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quisquam odio delectus quibusdam dolorum temporibus dolorem saepe iure repellendus nisi sit exercitationem eum quidem, libero blanditiis rem quod nesciunt. Sequi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, aperiam? Alias cum maiores expedita vero tempora earum voluptatum eius quidem fugiat suscipit incidunt tenetur iure cumque vel eum, architecto qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, dignissimos. Est, laudantium odio eius ut doloribus eaque laborum id? Harum blanditiis, sapiente asperiores consequuntur veritatis culpa similique temporibus aliquam iusto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione iste magnam hic earum neque pariatur, amet soluta nam id fuga quibusdam optio sequi animi placeat distinctio molestias. Autem, tempore praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem incidunt fugit ratione sapiente itaque iusto. Illum sequi aspernatur dignissimos ab dolore veniam doloremque iste vero. Voluptas sunt hic sed rerum!</p>
+        </div>
+        <script>
+            /*
+            var box = document.querySelectorAll('.box')[0];
+            /*setTimeout(()=>{
+                box.classList.add('animEsquerda')
+            },1000);
+            box.addEventListener('click',()=>{
+                box.classList.add('animEsquerda')
+            })
+            */
+            var span =  document.querySelector('.conteudo span')
+
+           span .addEventListener('click',function(){
+               var conteudo = document.querySelector('.conteudo p');
+
+               if (conteudo.classList.contains('mostrar')){
+                    span.innerHTML = 'Ver mais!';
+                   conteudo.classList.remove('mostrar');
+               }else{
+                   span.innerHTML = 'Ocultar!';
+                   conteudo.classList.add('mostrar');
+               }
+               
+           });
+        </script>
+    </body>
+</html>
